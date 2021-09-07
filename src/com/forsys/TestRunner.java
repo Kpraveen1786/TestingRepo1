@@ -38,14 +38,9 @@ public class TestRunner {
 	
 
 	public static void main(String[] args) throws ClassNotFoundException, URISyntaxException {
-//		String pathofthejarfile = new File(TestRunner.class.getProtectionDomain().getCodeSource().getLocation().toURI())
-//				.getPath();
-//		System.out.println("pathofgthejarfile : " + pathofthejarfile);
 		System.out.println("servicename : " + args[0]);
 		System.out.println("filename : " + args[1]);
 		System.out.println("loggerfilepath :  "+loggerfilepath);
-//		checkFolderExistsOrNot(args[0]);
-//		new File("D:\\E2E Automation\\Harmonic\\"+args[0]).mkdirs();
 		unprocessed_folder_path = unprocessed_folder_path + args[0] + "\\" + "Unprocess" + "\\" + args[1];
 		processed_folder_path = processed_folder_path + args[0] + "\\" + "Process" + "\\";
 		success_folder_path = success_folder_path + args[0] + "\\" + "Success" + "\\";
@@ -54,8 +49,6 @@ public class TestRunner {
 		System.out.println("processed_folder_path : " + processed_folder_path);
 		System.out.println("success_folder_path : " + success_folder_path);
 		System.out.println("error_folder_path : " + error_folder_path);
-//		PropertyConfigurator.configure(TestRunner.class.getClassLoader().getResource("src\\com\\forsys\\log4j.properties"));
-//		int i = 0;		
 		try {
 //			for (i = 0; i < 2; i++) {
 //				try {
@@ -102,11 +95,5 @@ public class TestRunner {
 		new File(unprocessed_folder_path + "\\" + servicename + "\\" + "Error").mkdirs();
 	}
 
-//	public static String xml = "<?xml version = \"1.0\" encoding = \"UTF-8\"?>\r\n"
-//			+ "<!DOCTYPE suite SYSTEM \"http://testng.org/testng-1.0.dtd\" >\r\n" + "\r\n"
-//			+ "<suite name = \"Suite1\">\r\n" + "\r\n" + "   <test name = \"exampletest1\">\r\n" + "      <classes>\r\n"
-//			+ "         <class name = \"com.Scheduling.com.Schedulingsalesorder\" />\r\n" + "      </classes>\r\n"
-//			+ "   </test>\r\n" + "\r\n" + "   <test name = \"exampletest2\">\r\n" + "      <classes>\r\n"
-//			+ "         <class name = \"com.Scheduling.com.Test2\" />\r\n" + "      </classes>\r\n" + "   </test>\r\n"
-//			+ "\r\n" + "</suite>";
+
 }
