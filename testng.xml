@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="softwaretestingmaterial">
+	<test name="testngTest">
+	
+		<groups>
+			<run>
+				<include name="smokeTest" />
+			</run>
+		</groups>
+	
+		<classes>
+			<class name="softwareTestingMaterial.TestCase1" />
+			<class name="softwareTestingMaterial.TestCase2" />
+		</classes>
+	</test>
+	
+	<test name="testngTest1">
+	
+		<groups>
+			<run>
+				<include name="smokeTest" />
+				<!-- <include name="functionalTest"/> -->
+			</run>
+		</groups>
+	
+		<classes>
+			<class name="softwareTestingMaterial.TestCase1" />
+			<class name="softwareTestingMaterial.TestCase2" />
+		</classes>
+	</test>
+	
+</suite>
