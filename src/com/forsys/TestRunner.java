@@ -14,15 +14,15 @@ public class TestRunner {
 		SimpleDateFormat formatter = new SimpleDateFormat("dd-MMM-yyyy hh:mm:ss");
 		String strDate = formatter.format(date);
 		String file_name = "application" + strDate;
-		file_name = file_name.replace(":", "-").replace(" ", "-");		
+		file_name = file_name.replace(":", "-").replace(" ", "-");
 		System.setProperty("application", file_name);
 		try {
 			String jarfilepath = new File(TestRunner.class.getProtectionDomain().getCodeSource().getLocation().toURI())
 					.getPath();
-			
+
 			jarfilepath = jarfilepath.substring(0, jarfilepath.lastIndexOf("\\"));
-			loggerfilepath = jarfilepath+"\\"+file_name;
-			System.out.println("jarfilepath = "+jarfilepath);
+			loggerfilepath = jarfilepath + "\\" + file_name;
+			System.out.println("jarfilepath = " + jarfilepath);
 		} catch (Exception e) {
 
 		}
@@ -35,12 +35,11 @@ public class TestRunner {
 	public static String error_folder_path = "D:\\E2E Automation\\Harmonic\\";
 	public static String filename = "";
 	public static String folderpath = "";
-	
 
 	public static void main(String[] args) throws ClassNotFoundException, URISyntaxException {
 		System.out.println("servicename : " + args[0]);
 		System.out.println("filename : " + args[1]);
-		System.out.println("loggerfilepath :  "+loggerfilepath);
+		System.out.println("loggerfilepath :  " + loggerfilepath);
 		unprocessed_folder_path = unprocessed_folder_path + args[0] + "\\" + "Unprocess" + "\\" + args[1];
 		processed_folder_path = processed_folder_path + args[0] + "\\" + "Process" + "\\";
 		success_folder_path = success_folder_path + args[0] + "\\" + "Success" + "\\";
@@ -94,6 +93,5 @@ public class TestRunner {
 		new File(unprocessed_folder_path + "\\" + servicename + "\\" + "Process").mkdirs();
 		new File(unprocessed_folder_path + "\\" + servicename + "\\" + "Error").mkdirs();
 	}
-
 
 }

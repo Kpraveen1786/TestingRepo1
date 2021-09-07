@@ -32,8 +32,6 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-//import com.schedule.util.TakeScreenShotOfBrowser;
-
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Schedulingsalesorder {
@@ -132,7 +130,7 @@ public class Schedulingsalesorder {
 							SSD_Update = sheet.getRow(i).getCell(3).getStringCellValue();
 
 							Thread.sleep(4000);
-							WebElement task = browser.findElement(By.linkText("Tasks"));							
+							WebElement task = browser.findElement(By.linkText("Tasks"));
 							WebDriverwaitelement(task);
 							task.click();
 							WebElement fulfillment = browser
@@ -351,8 +349,6 @@ public class Schedulingsalesorder {
 			// Since line is read from the last so it
 			// is in reverse so use reverse method to make it right
 			builder.reverse();
-//	    System.out.println("Line - " + builder.toString());
-//	    System.out.println("----------------------------------");
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
